@@ -1,0 +1,142 @@
+body {
+	background-color: #ffffff;
+	padding: 0px;
+	margin: 0px;
+	font-family:"Arial CE", Arial, "Helvetica CE", Helvetica, sans-serif;
+	font-size: 80%;
+	color: #000000;
+}
+
+a {color: #336699;}
+a:hover {color: #6B6B6B;}
+a img {border:none !important; text-decoration: none;}
+
+ul, li {
+	margin: 0 0 0 0;
+	padding: 0 5px 0 5px;	
+}
+/* moje */
+
+#site {
+	margin: 30px auto;
+	width: 960px;
+	background-color: #EDEEF0; 	
+	min-height:400px;
+	border:1px #CCC solid;	
+}
+
+#header {	
+	background: url(images/pictop.jpg) no-repeat;
+	background-color: #ffffff; 
+	height: 118px;	
+}
+
+#header img {
+	margin:5px 10px;
+}
+
+
+
+#lineumenut {
+	border-bottom: 4px solid #93E0FF;	
+}
+
+input, select, textarea { /* vlastnosti formularovych prvku */	
+	vertical-align: middle;
+}
+
+
+/* menu top */
+
+#menutop {
+	background: #036 url(images/menutop.jpg) no-repeat;
+	width: 960px;
+	height: 52px;		
+}
+
+#menutop a,#menutop a:active,#menutop a:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#menutop a:hover {
+	color:#000000;
+	position: relative;
+	text-decoration: none;	
+}
+
+#menutop ul li {
+	float:left;
+	list-style:none;
+	font-size: 1.2em;
+	color: #000000;
+	font-weight: bold;
+	margin-top: 16px;
+	
+}
+
+
+/* navigace */
+
+#navigace {
+	width: 960px;
+	height: 30px;
+	position: relative;
+	text-indent: 10px;
+	background-color: #ffffff; 
+}
+
+#navigace .nv {
+	padding: 6px 0 0 0;
+}
+
+/* sloupce */
+
+#colcontainer {
+	background-color: #EDEEF0;
+	width: 100%;	
+	}
+
+#colleft {
+	float: left;
+	width: 250px;
+}
+
+#colright {
+	float: right;
+	width: 700px;
+	background-color: #ffffff;
+}
+
+/* zapati */
+
+#endcointainer {
+	background-color: #183152;
+	clear: both;
+	font-size: 6px; 	
+	height: 20px;
+}
+
+#footer {
+	background-color: #ffffff;
+	font-size: 0.9em;
+	text-align: right;
+	font-weight: bold;
+	color: #183152;	
+}
+
+
+/* zpet */
+#zpetback {
+	padding: 0 1em 10em 0;
+	text-align: right;
+}
+
+
+/* links */
+
+#links { font-size: 12px; text-align: left; }
+#links ul li { list-style: none; padding-bottom: 8px; text-align: left; }
+
+
+

@@ -1,0 +1,183 @@
+<?
+
+
+
+function tnatmkorzk($lang) // priloha svedceni o akreditaci - holesovice
+
+{
+
+if($lang=='cz')
+
+	{
+
+echo"
+
+<div class='colrightall'>
+
+<h1>Atmosférické korozní zkoušky prováděné ve SVÚOM s.r.o.</h1>
+
+<br /><br />";
+
+
+
+echo"<table class='akrzk' cellpadding='5'>
+
+<tr class='trcaption'><td width='255' height='40'>Přesný název zkušebního postupu/metody</td>
+
+<td width='150' height='40'>Identifikace zkušebního postupu/metody</td></tr>";
+
+
+
+$query = "SELECT * FROM norms WHERE typeid=3";
+
+$result = mysql_query($query);
+
+$num_results = mysql_num_rows($result);
+
+
+
+for ($i=0; $i<$num_results; $i++)
+
+{
+
+$row = mysql_fetch_array($result);
+
+
+
+if ($i%2 == 0) 
+
+{ 
+
+echo"<tr><td width='255' height='40'>".htmlspecialchars(stripslashes($row['descr']))."</td>";
+
+echo"<td width='150' height='40' align='center'><a href='index.php?zobraz=anotace3&lang=cz&idnum=".htmlspecialchars(stripslashes($row['idnum']))."'>".htmlspecialchars(stripslashes($row['idnorm']))."</a></td>";
+
+}
+
+else
+
+{
+
+echo"<tr class='trgray'><td width='255' height='40'>".htmlspecialchars(stripslashes($row['descr']))."</td>";
+
+echo"<td width='150' height='40' align='center'><a href='index.php?zobraz=anotace3&lang=cz&idnum=".htmlspecialchars(stripslashes($row['idnum']))."'>".htmlspecialchars(stripslashes($row['idnorm']))."</a></td>";
+
+}
+
+}
+
+
+
+echo"</table><a href='#top'>nahoru</a></div>";			
+
+}
+
+
+
+if($lang=='en')
+
+	{
+
+echo"
+
+<div class='colrightall'>
+
+<h1>AAtmospheric corrosion tests</h1>
+
+<br /><br />";
+
+
+
+echo"<table class='akrzk' cellpadding='5'>
+
+<tr class='trcaption'><td width='255' height='40'>Exact name of test procedure/method</td>
+
+<td width='150' height='40'>Identification of test procedure/method</td></tr>";
+
+
+
+$query = "SELECT * FROM engnorms WHERE typeid=3";
+
+$result = mysql_query($query);
+
+$num_results = mysql_num_rows($result);
+
+
+
+for ($i=0; $i<$num_results; $i++)
+
+{
+
+$row = mysql_fetch_array($result);
+
+
+
+if ($i%2 == 0) 
+
+{ 
+
+echo"<tr><td width='255' height='40'>".htmlspecialchars(stripslashes($row['descr']))."</td>";
+
+echo"<td width='150' height='40' align='center'>".htmlspecialchars(stripslashes($row['idnorm']))."</td>";
+
+}
+
+else
+
+{
+
+echo"<tr class='trgray'><td width='255' height='40'>".htmlspecialchars(stripslashes($row['descr']))."</td>";
+
+echo"<td width='150' height='40' align='center'>".htmlspecialchars(stripslashes($row['idnorm']))."</td>";
+
+}
+
+}
+
+
+
+echo"</table><a href='#top'>top</a></div>";
+
+}
+
+}
+
+
+
+function tnatmkorzkmenu($lang) // menu vlevo
+
+{
+
+	if($lang=='cz')
+
+	{
+
+echo"
+
+<div class='colleftall' id='reference'>
+
+<h1>Atmosférické korozní zkoušky prováděné ve SVÚOM s.r.o.</h1>
+
+</div>";			
+
+	}
+
+	if($lang=='en')
+
+	{
+
+echo"
+
+<div class='colleftall' id='reference'>
+
+<h1>Atmospheric corrosion tests</h1>
+
+</div>";
+
+	}
+
+}
+
+
+
+?>

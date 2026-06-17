@@ -1,0 +1,26 @@
+.toggle {
+	width: auto;
+}
+
+.toggle ul {
+	display: none;
+}
+
+
+.slide {
+	font-weight: bold;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.slide:hover {
+	text-decoration: none;
+}
+
+.slideActive {
+	text-decoration: underline;
+}
+
+.slideActive:hover {
+	text-decoration: none;
+}

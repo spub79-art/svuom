@@ -1,0 +1,133 @@
+html {margin:0; padding: 0; width: 100%; color: #000000; background-color: transparent; }
+body {font-size: 14px; margin: 0; padding: 0; width: 100%; font-family: Arial, Helvetica, sans-serif;}
+
+a, a:active, a:visited {font-weight: bold; text-decoration: underline; color: #3399FF;}
+a:hover {font-weight: bold; text-decoration: none; color: #093C72;}
+
+img {
+	border: none;
+}
+
+img a  {
+	border: none;
+}
+
+img a:hover  {
+	border: none;
+}
+
+h4 {color: #3399FF; }
+
+#base {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+hr {
+	border: 1px solid #EBEBEB;
+}
+
+#header {width: 100%; height: auto; border: 1px solid #B1B1B1; padding-bottom: 5px;}
+
+#menutop {width: 100%; height: auto; padding: 10px; color: #3399FF; font-weight: bold; }
+
+#content {margin: 0; width: 100%; }
+
+#maincol {width: 100%;  border: 1px solid #B1B1B1; }
+#maincol #topic { padding: 10px; text-align: left; }
+
+fieldset {border: 1px solid Black; margin-bottom: 20px; padding: 5px;}
+legend {color: #3399FF; font-size: 14px; font-weight: bold;}
+
+.result {color: #FBAE4B;}
+.resultbad {color: #FF0000;}
+#menuimp {float: left; text-align: left; padding: 4px;} 
+
+.menuimpl {
+	float: left;
+	text-align: left;
+	padding: 4px;
+} 
+
+.menuimpr {
+	float: right;
+	text-align: right;
+	padding: 4px;
+} 
+
+input {margin: 2px; border: 1px solid #818181;}
+textarea {margin: 2px; border: 1px solid #818181;}
+
+
+/* prihl */
+
+.prihlframe { border: 1px solid #B1B1B1; width: 600px; margin: 50px auto; padding: 5px;}
+.cntr { text-align: center; }
+#prihl { text-align: center;}
+#prihl input {border: 1px solid #000000; }
+
+.foto { float: left; padding: 5px; height: 120px; text-align: center; }
+
+.zpr {
+	position: absolute;
+	top: 100px;	
+	color: Red;
+	background-color: White;
+	border: 1px solid #B1B1B1;
+	padding: 5px;
+}
+
+.openclose {
+	float: left;
+	
+	position: relative;
+}
+
+.youbox {
+	float: left;
+	width: 240px;
+	height: 170px;
+	text-align: center;
+	
+	font-size: 12px;	
+	/*border: 1px solid black;*/
+}
+
+.formpopis {
+	float: left;
+	width: 95%;
+	font-size: 12px;	
+	/*border: 1px solid black;*/
+}
+
+.vp1 { background-color: #B1B1B1; }
+.vp2 { background-color: #DBDBDB; }
+
+.picf {
+	border: 0px solid #ffffff;
+}
+
+.result {
+	color: #FBAE4B;
+	display: block;
+	background-color: White;
+}
+
+.badresult {
+	color: #FF0000;
+	display: block;
+	background-color: White;
+}
+
+/* prispevky */
+
+.published {
+	background: Lime;
+	width: 10px;
+}
+
+.notpublished {
+	background: Black;
+	width: 10px;
+}

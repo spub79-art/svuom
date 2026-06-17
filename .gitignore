@@ -1,0 +1,17 @@
+# IDE / editor
+.vscode/sftp.json
+.idea/
+
+# Tajne / lokalni
+config/secrets.php
+*.sql
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Zalozni kopie configu
+system/dbconnection.php.puvodni

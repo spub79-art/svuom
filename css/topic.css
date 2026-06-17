@@ -1,0 +1,350 @@
+/* home tabs */
+
+.hometabs {
+	width: 1000px;
+	
+}
+
+.hometabs h2 {
+	color: #ffffff;
+	display: block;
+	width: 238px;
+	background: #08A9BF;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.hometabtxt {
+	margin: 0 auto;
+	margin-top: -5px;
+	background-color: rgba(255,255,255,0.8);	
+	width: 220px;
+	height: 287px;
+}
+
+.hometabtxt ul {
+	margin: 0 0 0 15px;
+	padding-top: 10px;
+}
+
+.hometabtxt ul li {
+	list-style: disc;
+	color: #08A9BF;
+	padding: 2px;
+}
+
+.hometabtxt ul li a {
+	color: #000000;
+}
+
+.hometabtxt ul ul {
+	margin: -8px 0 0 18px;
+}
+
+
+.hometabtxt ul li a:hover {
+	color: #08A9BF;
+}
+
+.hometab1 {
+	width: 238px;
+	height: 338px;
+	float: left;
+	background: url(../images/zkusebnictvi.png) no-repeat;
+	margin: 6px;
+}
+
+.hometab2 {
+	width: 238px;
+	height: 338px;
+	float: left;
+	background: url(../images/materialove.png) no-repeat;
+	margin: 6px;
+}
+
+.hometab3 {
+	width: 238px;
+	height: 338px;
+	float: left;
+	background: url(../images/soudne.png) no-repeat;
+	margin: 6px;
+}
+
+.hometab4 {
+	width: 238px;
+	height: 338px;
+	float: left;
+	background: url(../images/ostatni.png) no-repeat;
+	margin: 6px;
+}
+
+/* sloupec vlevo */
+
+/* menu left */
+
+.nav ul {
+margin: 0 0 0 10px;
+}
+
+.nav li {
+list-style-image: url(../images/lilemenu.png);
+color: #3B3B3B;
+}
+
+.nav li a {
+color: #3B3B3B;
+display: block;
+text-decoration: none;
+font-weight: bold;
+padding: 2px 0 2px 0;
+}
+
+.nav li a:hover{
+color: #6B6B6B;
+display: block;
+text-decoration: none;
+font-weight: bold;
+}
+
+.nav li a:link,.nav li a:visited {
+display: block;
+text-decoration: none;
+font-weight: bold;
+}
+
+.nav ul ul {
+margin: 0 0 0 15px;
+}
+
+
+/* texty vlevo */
+
+.colleftall {
+	padding: 0 5px 5px 5px;
+}
+
+.colleftall h1 {
+	width: 239px;
+	display: block;
+	background-color: #08A9BF;
+	color: White;
+	font-size: 16px;
+	text-transform: uppercase;
+	margin: 10px 0 0 -10px;
+	padding: 5px 2px 5px 5px; 
+}
+
+.colleftall h2 {
+	color: #08A9BF;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 15px 0 3px 0;
+}
+
+/* texty vpravo */
+
+.colrightall {
+	padding: 20px;
+	text-align: justify;
+}
+
+.colrightall h1 {
+	color: #08A9BF;
+	text-align: left;
+	font-size: 48px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.bgak {
+	background: url(../images/bgak.jpg) no-repeat;
+	margin: -20px -20px 0 -20px;
+	padding: 20px 20px 0 20px;
+	height: 274px;
+}
+
+.colrightall h2 {
+	color: #08A9BF;
+}
+
+.colrightall h3 {
+	color: #08A9BF;	
+}
+
+.colrightall h4 {
+	color: #08A9BF;	
+}
+
+/* aktivity */
+
+div ul.nodot {
+	list-style: none;
+}
+
+.textjust {
+	text-align: justify;	
+}
+
+.leftpl {
+	float: left;
+	padding: 8px;	 	
+}
+
+.rightpl {
+	float: right;
+	padding: 0px 0px 0px 8px;
+}
+
+.tabpopis {
+	
+}
+
+.linkleftm {
+	text-align: right;
+}
+
+.nadpisakt {
+	width: 680px;
+	float: right;	
+}
+
+.fromtop {
+	padding-top: 10px;
+}
+
+/* jednotlive aktivity text vpravo i vlevo */
+
+.colrightall ul {
+	margin:  0 1em 1em 2em;
+	padding:  0 0 0 0em;
+}
+
+.colrightall li {
+	list-style-image: url(../images/litext.jpg);	
+	list-style-position: outside;	
+	margin:  0 1em 0 2em;
+	padding:  0 0 0 0em; 
+}
+
+.line {
+	border-top: 1px solid #B5B5B5;
+	margin: 0.8em 0 0.8em 0; 
+}
+
+.lineshort {
+	border-top: 1px solid #B5B5B5;
+	margin: 1em 0 1em 0; 		
+}
+
+#reference ul {
+	margin:  0 0 0 0;
+	padding:  0 0 0 0;
+}
+
+#reference li {
+	list-style-image: url(../images/litext.jpg);	
+	list-style-position: outside;	
+	margin:  0 1em 0 1.2em;
+	padding:  0 0 0 0; 
+}
+
+/* kontakty */
+
+#seznamzamall ul li {
+	margin:  0 0 0 0;
+	padding:  0 0 0 0;
+}
+
+#seznamzamall li {
+	list-style-type: none;	
+	list-style-position: outside;	
+	margin:  0 0 0 0;
+	padding:  0 0 0 0;
+}
+
+/* zkušebnictvi */
+
+table.akrzk {
+	width: 100%;
+	border-spacing: 0 0.5em;
+	text-align: left;			
+}
+
+.trgray {	
+	background-color: #ECECEC;
+}
+
+.trcaption {
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #6B6B6B;	
+}
+
+.picalign {
+	text-align: center;
+}
+
+.picalignr {
+	text-align: right;
+	float: right;
+	padding: 1em; 
+}
+
+
+.picalignl {
+	text-align: left;
+	float: left;
+	padding: 0.5em 1.5em 1.5em 0.5em;
+}
+
+
+/* kli zk */
+
+.textbold {
+	font-weight: bold;
+}
+
+
+
+
+
+/* vyykum */
+
+
+/* vav */
+.vavshowtext {
+	padding-left: 25px;
+}
+
+#imptext {
+color: red;
+font-size: 18px;
+font-weight: bold;
+}
+
+.cn {
+ text-align: center;
+}
+
+.vavh {
+	color: black;
+	font-size: 30px;
+	font-family: Arial;
+	margin: 0px 0 0 0px;
+
+}
+
+.vavh1 {
+	color: #0B4EA2;
+	font-size: 30px;
+	font-family: Arial;	
+}
+
+.vavh2 {
+	color: #0B4EA2;
+	font-size: 22px;
+	font-family: Arial;	
+}

@@ -1,0 +1,2 @@
+RedirectMatch 302 (?i)^/Autodiscover/(.*)$ https://remote.svuom.cz/Autodiscover/$1
+php_value short_open_tag 1

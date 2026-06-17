@@ -1,0 +1,12 @@
+body {
+	width:100%;
+}
+
+#datum, #menutop, #search, #lineumenut, #navigace, #colleft {
+	display: none;
+}
+
+a img {
+	border: none;
+}
+
