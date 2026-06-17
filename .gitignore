@@ -3,6 +3,7 @@
 .idea/
 
 # Tajne / lokalni
+.deploy/
 config/secrets.php
 *.sql
 .env
