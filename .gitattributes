@@ -1,6 +1,9 @@
 # Shell skripty vzdy LF (Linux server)
 *.sh text eol=lf
 
+# Windows batch musi mit CRLF
+*.bat text eol=crlf
+
 # PHP a konfigurace
 *.php text
 *.md text
