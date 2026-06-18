@@ -36,6 +36,10 @@ if [[ -f "$SECRETS_TMP" ]]; then
 fi
 
 chmod +x "$TARGET/scripts/deploy-staging.sh"
+
+# Git 2.35+: root muze pull i kdyz je vlastnik www-data
+git config --global --add safe.directory "$TARGET"
+
 chown -R www-data:www-data "$TARGET" 2>/dev/null || true
 
 echo "Hotovo. Otestujte: https://new.svuom.cz/"

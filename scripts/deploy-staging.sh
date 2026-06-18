@@ -4,6 +4,9 @@ set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
+REPO_ROOT="$(pwd)"
+git config --global --add safe.directory "$REPO_ROOT" 2>/dev/null || true
+
 if [[ ! -f config/secrets.php ]]; then
   echo "Chybi config/secrets.php — zkopirujte z config/secrets.example.php"
   exit 1
