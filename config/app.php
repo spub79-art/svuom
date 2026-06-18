@@ -59,7 +59,7 @@ function svuom_config()
         'staging' => array(
             'environment' => 'staging',
             'db_host' => 'localhost',
-            'db_name' => 'svuom_staging',
+            'db_name' => 'new.svuom',
             'db_user' => 'svuom',
             'site_host' => 'new.svuom.cz',
             'site_url' => 'https://new.svuom.cz',

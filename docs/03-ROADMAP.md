@@ -7,7 +7,7 @@
 **Další krok:** Fáze 1 — PDO vrstva místo `mysql_*`
 
 - [x] Analýza stávajícího webu
-- [x] Staging `new.svuom.cz` + klon DB `svuom_staging`
+- [x] Staging `new.svuom.cz` — DB `new.svuom`, uživatel `svuom`
 - [x] Config podle domény (`config/app.php`)
 - [x] Git repo + push na GitHub
 - [x] SSH klíč pro deploy

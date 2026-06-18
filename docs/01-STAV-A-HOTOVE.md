@@ -6,7 +6,7 @@
 
 | Prostředí | URL | DocumentRoot | DB | PHP (web) |
 |-----------|-----|--------------|-----|-----------|
-| **Staging** | https://new.svuom.cz | `/var/www/html/new.www` | `svuom_staging` | **přepínáme na 8.1-fpm** (dosud 5.6-fpm) |
+| **Staging** | https://new.svuom.cz | `/var/www/html/new.www` | `new.svuom` (uživatel `svuom`) | **přepínáme na 8.1-fpm** |
 | **Produkce** | https://www.svuom.cz | `/var/www/html/www` | `svuom` | pravděpodobně 5.6-fpm (neověřeno v této relaci) |
 
 **Server:** `glpi.svuom.cz` (SSH jako root, klíč v `.deploy/svuom_staging` — **mimo git**)

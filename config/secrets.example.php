@@ -11,6 +11,7 @@ return array(
     ),
     'staging' => array(
         'db_pass' => 'HESLO_STAGING',
+        // 'db_name' => 'new.svuom',  // volitelne, default je v app.php
     ),
     'local' => array(
         'db_pass' => 'root',
