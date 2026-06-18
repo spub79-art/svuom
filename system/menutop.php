@@ -18,7 +18,7 @@ echo"<ul>";
 
 
 
-echo"<li><a href='index.php?zobraz=home&lang=".$lang."'>";
+echo"<li><a href='/" . $lang . "/'>";
 
 	if($lang=='cz') echo"úvod";		
 

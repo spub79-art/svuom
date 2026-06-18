@@ -17,14 +17,16 @@
 
 ---
 
-## Fáze 1 — Technický základ na stagingu
+## Fáze 1 — Nový základ (aktuální)
 
-- [x] PDO polyfill `system/mysql_pdo.php` — mysql_* přes PDO na PHP 8+ (2026-06-18)
-- [ ] Ověřit polyfill na serveru pod php8.1-cli (`scripts/test-db-php8.php`)
-- [ ] Front controller (nový `public/index.php` nebo refaktor stávajícího)
-- [ ] Základní layout šablona (oddělení HTML kostry od obsahu)
-- [ ] Staging banner, error handling pro debug
-- [ ] Přepnutí Apache na php8.1-fpm (až po PDO)
+- [x] PDO + PHP 8.1 na stagingu
+- [x] Front controller + hezké URL (`/cz/`, `/en/`) — 2026-06-18
+- [x] Aktuality bez lightboxu (homepage blok + seznam + detail)
+- [ ] Hledání FULLTEXT
+- [ ] Tabulky `pages`, `redirects` + migrace obsahu
+- [ ] Nový admin `/admin/`
+
+Viz detail: **06-NAVRH-KOSTRY.md**
 
 ---
 

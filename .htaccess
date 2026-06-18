@@ -1,6 +1,15 @@
 RedirectMatch 302 (?i)^/Autodiscover/(.*)$ https://remote.svuom.cz/Autodiscover/$1
 php_value short_open_tag 1
 
+# --- Pretty URL: /cz/, /en/ ---
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^$ /cz/ [R=302,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(cz|en)(/.*)?$ index.php [L,QSA]
+</IfModule>
+
 # --- staging new.svuom.cz: neindexovat (roboti + HTTP hlavicka) ---
 <IfModule mod_rewrite.c>
 RewriteEngine On
