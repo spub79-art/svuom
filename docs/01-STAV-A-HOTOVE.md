@@ -66,8 +66,13 @@ Staging vhost (`001b-new.www.conf`) používá **`php8.1-fpm.sock`** (od 2026-06
 - [x] **Deploy workflow end-to-end** — ověřeno 2026-06-18 (push z PC → `git fetch` + `reset --hard` na serveru; `deploy\` BAT skripty)
 - [x] Migrace `mysql_*` → PDO — `system/mysql_pdo.php` (PHP 8.1 na stagingu)
 - [x] Přepnutí staging vhostu na php8.1-fpm + `short_open_tag` (2026-06-18)
-- [ ] Nová architektura (šablony, admin, migrace obsahu)
-- [ ] Inventář URL + redirecty
+- [x] **Front controller** — `app/`, `templates/`, `/cz/` `/en/` (commit `fd72e80`, **čeká deploy na staging**)
+- [x] Aktuality bez lightboxu (šablony — na stagingu uvidíš až po deployi)
+- [ ] Deploy `fd72e80` na staging
+- [ ] Hledání FULLTEXT
+- [ ] Tabulky `pages`, `redirects` + migrace obsahu
+- [ ] Nový admin `/admin/`
+- [ ] Inventář URL + redirecty starých odkazů
 - [ ] Audit přístupnosti / legislativy
 - [ ] Git init na produkci (až po dokončení stagingu)
 

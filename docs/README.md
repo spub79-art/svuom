@@ -20,7 +20,7 @@ Tato složka slouží jako **„paměť projektu“** pro pokračování v nové
 
 **Repo:** https://github.com/spub79-art/svuom  
 **Staging:** https://new.svuom.cz  
-**Další krok:** Fáze 1 — schválení návrhu kostry (`docs/06-NAVRH-KOSTRY.md`), pak implementace partialů
+**Další krok:** deploy `fd72e80` na staging (`deploy\3-staging-pull-only.bat`), pak FULLTEXT hledání — viz `01-STAV-A-HOTOVE.md` sekce PAUZA
 
 ## Aktualizace
 
