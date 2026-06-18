@@ -6,6 +6,7 @@
 require("./library/phpMailer_v2.3/class.phpmailer.php");
 
 require_once dirname(__DIR__) . '/config/app.php';
+svuom_apply_staging_noindex();
 $svuom_cfg = svuom_config();
 $conn_server = $svuom_cfg['db_host'];
 $conn_user = $svuom_cfg['db_user'];
@@ -78,6 +79,7 @@ $web = $svuom_cfg['site_host'];
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Správa webových stránek <? echo $web; ?></title>
+	<meta name="robots" content="<? echo htmlspecialchars(svuom_robots_meta_content(), ENT_QUOTES, 'UTF-8'); ?>" />
 	
 	<link href="css/layoutadmin.css" rel="stylesheet" type="text/css" media="screen,projection" />
 	

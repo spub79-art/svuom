@@ -1,0 +1,6 @@
+# Shell skripty vzdy LF (Linux server)
+*.sh text eol=lf
+
+# PHP a konfigurace
+*.php text
+*.md text

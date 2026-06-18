@@ -1,2 +1,14 @@
 RedirectMatch 302 (?i)^/Autodiscover/(.*)$ https://remote.svuom.cz/Autodiscover/$1
 php_value short_open_tag 1
+
+# --- staging new.svuom.cz: neindexovat (roboti + HTTP hlavicka) ---
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^new\.svuom\.cz$ [NC]
+RewriteRule ^robots\.txt$ robots-staging.txt [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+SetEnvIf Host ^new\.svuom\.cz$ svuom_staging=1
+Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex" env=svuom_staging
+</IfModule>

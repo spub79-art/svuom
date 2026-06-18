@@ -103,4 +103,26 @@ function svuom_is_staging()
     return $cfg['environment'] === 'staging';
 }
 
+function svuom_robots_meta_content()
+{
+    if (svuom_is_staging()) {
+        return 'noindex, nofollow, noarchive, nosnippet, noimageindex';
+    }
+
+    return 'index, follow';
+}
+
+function svuom_apply_staging_noindex()
+{
+    if (!svuom_is_staging()) {
+        return;
+    }
+
+    if (headers_sent()) {
+        return;
+    }
+
+    header('X-Robots-Tag: noindex, nofollow, noarchive, nosnippet, noimageindex', true);
+}
+
 ?>

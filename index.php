@@ -1,5 +1,8 @@
 <?
 
+require_once __DIR__ . '/config/app.php';
+svuom_apply_staging_noindex();
+
 include "./system/menutop.php";
 
 include "./system/home.php";
@@ -189,7 +192,7 @@ if(!isset($zobraz))$zobraz='home';
 
 	<meta name="author" content="Code &amp; design: DirectSolution, Luk Pack; Content: Luk Pack, Kateina Kreislov, Hana Kalouskov, Marek Thrner; e-mail:info@svuom.cz" />
 
-	<meta name="robots" content="index,follow" />
+	<meta name="robots" content="<? echo htmlspecialchars(svuom_robots_meta_content(), ENT_QUOTES, 'UTF-8'); ?>" />
 
 	<meta name="rating" content="general" />
 

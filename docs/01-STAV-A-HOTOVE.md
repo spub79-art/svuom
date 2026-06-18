@@ -53,15 +53,17 @@ Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` —
 - Veřejný klíč na serveru v `authorized_keys` — **funguje**
 
 ### Staging web
-- **Běží** — k 2026-06-18 nahráno přes **SFTP** (ne git clone)
-- Na serveru: `NO_GIT` v `/var/www/html/new.www`
-- `config/secrets.php` na serveru existuje
+- **Běží** z **git clone** (`/var/www/html/new.www/.git`)
+- Záloha před přepnutím: `/var/www/html/new.www.pre-git-bak`
+- `config/secrets.php` na serveru obnoven po clone
+- **Neindexování:** `robots-staging.txt`, `X-Robots-Tag` + meta `noindex` jen na `new.svuom.cz` (produkce beze změny)
 
 ---
 
 ## Co **není** hotové ❌
 
-- [ ] **Git deploy na staging serveru** — `server-init-staging.sh` ještě nespuštěn (čeká na schválení / ruční spuštění)
+- [x] **Git deploy na staging serveru** — hotovo 2026-06-18 (clone + záloha `new.www.pre-git-bak`)
+- [ ] Ověřit `git pull` workflow end-to-end (push z PC → pull na serveru)
 - [ ] Migrace `mysql_*` → PDO (nutné pro PHP 8)
 - [ ] Přepnutí vhostu na php8.1-fpm
 - [ ] Nová architektura (šablony, admin, migrace obsahu)
@@ -73,12 +75,14 @@ Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` —
 
 ## Jednorázový příkaz — přepnout staging na git
 
+**Hotovo** — staging běží z git clone. Pro budoucí reference (skript z PC, kvůli CRLF používat po `git pull` skript už ze serveru):
+
 ```powershell
 cd c:\www\svuom
-.\scripts\ssh-staging.ps1 "bash /var/www/html/new.www/scripts/server-init-staging.sh https://github.com/spub79-art/svuom.git"
+Get-Content .\scripts\server-init-staging.sh -Raw | ssh -i ".deploy\svuom_staging" root@glpi.svuom.cz "bash -s -- https://github.com/spub79-art/svuom.git"
 ```
 
-Záloha: `/var/www/html/new.www.pre-git-bak`
+Varování `$'\r': command not found` na konci je neškodné (Windows CRLF); po `.gitattributes` už by se nemělo opakovat.
 
 ---
 
@@ -86,8 +90,13 @@ Záloha: `/var/www/html/new.www.pre-git-bak`
 
 ```powershell
 cd c:\www\svuom
-.\scripts\deploy.ps1 -Message "popis změny"
+git add -A
+git commit -m "popis zmeny"
+git push
+ssh -i ".deploy\svuom_staging" -o BatchMode=yes root@glpi.svuom.cz "cd /var/www/html/new.www && git pull --ff-only origin main"
 ```
+
+Nebo: `powershell -ExecutionPolicy Bypass -File .\scripts\deploy.ps1 -Message "popis zmeny"`
 
 ---
 
