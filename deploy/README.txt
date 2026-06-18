@@ -22,6 +22,9 @@ Slozka: c:\www\svuom\deploy\
 6-opravit-staging-git.bat
   Jednorazove: server srovna s GitHub (kdyz deploy hlasi konflikt)
 
+7-prepnout-php81.bat
+  Deploy + test PDO + prepnuti staging z PHP 5.6 na PHP 8.1
+
 _remote-sync-staging.bat
   Interni prikaz pro sync serveru
 

@@ -65,6 +65,18 @@ class SvuomMysqlResult
     }
 }
 
+function svuom_build_pdo_dsn($cfg)
+{
+    $db = $cfg['db_name'];
+
+    // localhost = unix socket (stejne chovani jako stary mysql_connect)
+    if ($cfg['db_host'] === 'localhost') {
+        return 'mysql:dbname=' . $db . ';charset=utf8';
+    }
+
+    return 'mysql:host=' . $cfg['db_host'] . ';dbname=' . $db . ';charset=utf8';
+}
+
 function svuom_mysql_pdo()
 {
     static $pdo = null;
@@ -79,7 +91,7 @@ function svuom_mysql_pdo()
     }
 
     $cfg = svuom_config();
-    $dsn = 'mysql:host=' . $cfg['db_host'] . ';dbname=' . $cfg['db_name'] . ';charset=utf8';
+    $dsn = svuom_build_pdo_dsn($cfg);
 
     try {
         $pdo = new PDO($dsn, $cfg['db_user'], $cfg['db_pass'], array(
