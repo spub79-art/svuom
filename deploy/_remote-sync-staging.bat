@@ -1,8 +1,4 @@
 @echo off
-REM Synchronizace staging serveru s GitHub (staging = presna kopie repa)
-REM Pouziva git reset --hard - lokální úpravy souborů na serveru se zahodí.
-REM Nezasahuje do: config/secrets.php, necommitnutých uploadů v prilohy/
-
 chcp 65001 >nul
 cd /d "%~dp0.."
 
