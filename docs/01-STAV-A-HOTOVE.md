@@ -13,7 +13,7 @@
 
 **Nainstalované PHP na serveru:** 5.6, 7.3, 8.1 (CLI default), 8.4, 8.5 — aktivní php-fpm: 5.6, 7.3, 8.1
 
-Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` — **cíl: přepnout na `php8.1-fpm.sock`** po ověření PDO vrstvy (`scripts/switch-staging-php81.sh`).
+Staging vhost (`001b-new.www.conf`) používá **`php8.1-fpm.sock`** (od 2026-06-18). Na PHP 8.1 je zapnutý **`short_open_tag`** (`scripts/enable-php81-short-tags.sh`).
 
 ---
 

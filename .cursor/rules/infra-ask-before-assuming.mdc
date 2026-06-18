@@ -1,0 +1,29 @@
+---
+description: U hotových věcí bez detailů se zeptat — nehádat infrastrukturu
+alwaysApply: true
+---
+
+# Infra a „hotové“ v docs — nejdřív zeptat
+
+Když v `docs/` nebo v kódu něco **je označené jako hotové**, ale **chybí konkrétní jak** (název DB, uživatel, port, cesta, verze PHP, heslo kde je uložené…), **zeptej se zadavatele dřív, než to použiješ nebo změníš**.
+
+## Neodvozovat z názvu nebo zvyku
+
+- ❌ „Staging asi používá `svuom_staging`, protože tak to stojí v roadmapě.“
+- ❌ „Deploy asi jde přes `git pull`, protože tak to někde bylo.“
+- ✅ „V docs je hotový deploy — jaká je přesná DB na stagingu a uživatel?“
+
+## Kdy se ptát
+
+- DB: název databáze, uživatel, zda je stejný jako produkce
+- Server: hostname, SSH port, document root, PHP verze ve vhostu
+- Secrets: co je v `config/secrets.php` na serveru vs v šabloně
+- Cokoli označené ✅ bez řádku **jak přesně** to běží
+
+## Po ověření
+
+Zapiš faktické hodnoty do `docs/01-STAV-A-HOTOVE.md` (tabulka prostředí nebo sekce hotové), aby další relace nemusela hádat.
+
+## Příklad z projektu
+
+Staging DB je **`new.svuom`**, uživatel **`svuom`** — ne `svuom_staging` (ten na serveru neexistuje).

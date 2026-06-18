@@ -24,3 +24,5 @@ Tato složka slouží jako **„paměť projektu“** pro pokračování v nové
 ## Aktualizace
 
 Při větších milnících uprav příslušný soubor a datum nahoře.
+
+**Pravidlo pro AI i lidi:** u položek označených jako hotové vždy zapiš **jak přesně** (ne jen že je hotovo). Pokud detail chybí, **zeptej se** — nehádej z názvu nebo z plánu. Viz `.cursor/rules/infra-ask-before-assuming.mdc`.
