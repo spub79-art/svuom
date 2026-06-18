@@ -19,7 +19,7 @@ Tato složka slouží jako **„paměť projektu“** pro pokračování v nové
 
 **Repo:** https://github.com/spub79-art/svuom  
 **Staging:** https://new.svuom.cz  
-**Další krok:** git init na serveru (viz 01-STAV-A-HOTOVE.md)
+**Další krok:** Fáze 1 — PDO vrstva (`mysql_*` → PDO), viz 03-ROADMAP.md
 
 ## Aktualizace
 
