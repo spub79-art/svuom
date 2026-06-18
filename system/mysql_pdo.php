@@ -5,9 +5,11 @@
  * On PHP 5.6 with ext/mysql loaded, this file is a no-op.
  */
 
-if (function_exists('mysql_connect')) {
+if (function_exists('mysql_pconnect') || defined('SVUOM_MYSQL_PDO_LOADED')) {
     return;
 }
+
+define('SVUOM_MYSQL_PDO_LOADED', true);
 
 if (!defined('MYSQL_ASSOC')) {
     define('MYSQL_ASSOC', 1);
@@ -29,8 +31,11 @@ class SvuomMysqlResult
         $this->rows = $rows;
     }
 
-    public function fetch($resultType = MYSQL_BOTH)
+    public function fetch($resultType = null)
     {
+        if ($resultType === null) {
+            $resultType = MYSQL_BOTH;
+        }
         if ($this->index >= count($this->rows)) {
             return false;
         }
@@ -141,8 +146,11 @@ function mysql_num_rows($result)
     return 0;
 }
 
-function mysql_fetch_array($result, $result_type = MYSQL_BOTH)
+function mysql_fetch_array($result, $result_type = null)
 {
+    if ($result_type === null) {
+        $result_type = MYSQL_BOTH;
+    }
     if ($result instanceof SvuomMysqlResult) {
         return $result->fetch($result_type);
     }

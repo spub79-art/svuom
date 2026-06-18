@@ -5,10 +5,12 @@
  * Na serveru: php8.1 scripts/test-db-php8.php
  */
 
+$_SERVER['HTTP_HOST'] = getenv('SVUOM_TEST_HOST') ?: 'new.svuom.cz';
+
 require_once dirname(__DIR__) . '/config/app.php';
 require_once dirname(__DIR__) . '/system/mysql_pdo.php';
 
-if (function_exists('mysql_connect') && !class_exists('SvuomMysqlResult', false)) {
+if (!class_exists('SvuomMysqlResult', false)) {
     echo "SKIP: nativni ext/mysql — spustte pod php8.1+\n";
     exit(0);
 }
