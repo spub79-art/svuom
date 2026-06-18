@@ -6,6 +6,7 @@
 require("./library/phpMailer_v2.3/class.phpmailer.php");
 
 require_once dirname(__DIR__) . '/config/app.php';
+require_once dirname(__DIR__) . '/system/mysql_pdo.php';
 svuom_apply_staging_noindex();
 $svuom_cfg = svuom_config();
 $conn_server = $svuom_cfg['db_host'];

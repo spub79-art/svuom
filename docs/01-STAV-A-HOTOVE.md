@@ -64,7 +64,7 @@ Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` —
 
 - [x] **Git deploy na staging serveru** — hotovo 2026-06-18 (clone + záloha `new.www.pre-git-bak`)
 - [x] **Deploy workflow end-to-end** — ověřeno 2026-06-18 (push z PC → `git fetch` + `reset --hard` na serveru; `deploy\` BAT skripty)
-- [ ] Migrace `mysql_*` → PDO (nutné pro PHP 8)
+- [ ] Migrace `mysql_*` → PDO (nutné pro PHP 8) — **rozpracováno:** `system/mysql_pdo.php` (polyfill pro PHP 8+, na 5.6 beze změny)
 - [ ] Přepnutí vhostu na php8.1-fpm
 - [ ] Nová architektura (šablony, admin, migrace obsahu)
 - [ ] Inventář URL + redirecty

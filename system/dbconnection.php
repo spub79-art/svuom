@@ -1,6 +1,7 @@
 <?
 
 require_once dirname(__DIR__) . '/config/app.php';
+require_once __DIR__ . '/mysql_pdo.php';
 
 function dbconnection()
 

@@ -19,7 +19,8 @@
 
 ## Fáze 1 — Technický základ na stagingu
 
-- [ ] PDO vrstva místo `mysql_*`
+- [x] PDO polyfill `system/mysql_pdo.php` — mysql_* přes PDO na PHP 8+ (2026-06-18)
+- [ ] Ověřit polyfill na serveru pod php8.1-cli (`scripts/test-db-php8.php`)
 - [ ] Front controller (nový `public/index.php` nebo refaktor stávajícího)
 - [ ] Základní layout šablona (oddělení HTML kostry od obsahu)
 - [ ] Staging banner, error handling pro debug
