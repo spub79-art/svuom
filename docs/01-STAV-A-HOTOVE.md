@@ -6,7 +6,7 @@
 
 | Prostředí | URL | DocumentRoot | DB | PHP (web) |
 |-----------|-----|--------------|-----|-----------|
-| **Staging** | https://new.svuom.cz | `/var/www/html/new.www` | `new.svuom` (uživatel `svuom`) | **přepínáme na 8.1-fpm** |
+| **Staging** | https://new.svuom.cz | `/var/www/html/new.www` | `new.svuom` (uživatel `svuom`) | **8.1-fpm** (od 2026-06-18) |
 | **Produkce** | https://www.svuom.cz | `/var/www/html/www` | `svuom` | pravděpodobně 5.6-fpm (neověřeno v této relaci) |
 
 **Server:** `glpi.svuom.cz` (SSH jako root, klíč v `.deploy/svuom_staging` — **mimo git**)
@@ -64,8 +64,8 @@ Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` —
 
 - [x] **Git deploy na staging serveru** — hotovo 2026-06-18 (clone + záloha `new.www.pre-git-bak`)
 - [x] **Deploy workflow end-to-end** — ověřeno 2026-06-18 (push z PC → `git fetch` + `reset --hard` na serveru; `deploy\` BAT skripty)
-- [ ] Migrace `mysql_*` → PDO — **rozpracováno:** `system/mysql_pdo.php` (polyfill pro PHP 8+)
-- [ ] Přepnutí staging vhostu na php8.1-fpm (`scripts/switch-staging-php81.sh`)
+- [x] Migrace `mysql_*` → PDO — `system/mysql_pdo.php` (PHP 8.1 na stagingu)
+- [x] Přepnutí staging vhostu na php8.1-fpm + `short_open_tag` (2026-06-18)
 - [ ] Nová architektura (šablony, admin, migrace obsahu)
 - [ ] Inventář URL + redirecty
 - [ ] Audit přístupnosti / legislativy
