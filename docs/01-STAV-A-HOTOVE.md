@@ -63,7 +63,7 @@ Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` —
 ## Co **není** hotové ❌
 
 - [x] **Git deploy na staging serveru** — hotovo 2026-06-18 (clone + záloha `new.www.pre-git-bak`)
-- [ ] Ověřit `git pull` workflow end-to-end (push z PC → pull na serveru)
+- [x] **Deploy workflow end-to-end** — ověřeno 2026-06-18 (push z PC → `git fetch` + `reset --hard` na serveru; `deploy\` BAT skripty)
 - [ ] Migrace `mysql_*` → PDO (nutné pro PHP 8)
 - [ ] Přepnutí vhostu na php8.1-fpm
 - [ ] Nová architektura (šablony, admin, migrace obsahu)
@@ -105,7 +105,8 @@ Ručně (PowerShell):
 ```powershell
 cd c:\www\svuom
 git push
-ssh -i ".deploy\svuom_staging" root@glpi.svuom.cz "cd /var/www/html/new.www && git pull --ff-only origin main"
+# Na serveru se používá reset --hard (viz deploy\_remote-sync-staging.bat), ne pull — kvůli konfliktům s lokálními změnami na serveru
+ssh -i ".deploy\svuom_staging" root@glpi.svuom.cz "cd /var/www/html/new.www && git fetch origin main && git reset --hard origin/main"
 ```
 
 ---

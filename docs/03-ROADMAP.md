@@ -2,7 +2,9 @@
 
 > Poslední aktualizace: 2026-06-18
 
-## Fáze 0 — Infrastruktura ⏳ (téměř hotovo)
+## Fáze 0 — Infrastruktura ✅ (hotovo)
+
+**Další krok:** Fáze 1 — PDO vrstva místo `mysql_*`
 
 - [x] Analýza stávajícího webu
 - [x] Staging `new.svuom.cz` + klon DB `svuom_staging`
@@ -10,8 +12,8 @@
 - [x] Git repo + push na GitHub
 - [x] SSH klíč pro deploy
 - [x] Deploy skripty
-- [ ] **Git clone na staging serveru** (místo SFTP) — **DALŠÍ KROK**
-- [ ] Ověřit `git pull` workflow end-to-end
+- [x] **Git clone na staging serveru** (místo SFTP) — hotovo 2026-06-18
+- [x] Ověřit deploy workflow end-to-end — hotovo 2026-06-18
 
 ---
 
