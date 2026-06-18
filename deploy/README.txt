@@ -19,6 +19,12 @@ Slozka: c:\www\svuom\deploy\
 5-kontrola-staging.bat
   Zkontroluje robots.txt, hlavicky a stav gitu na serveru
 
+6-opravit-staging-git.bat
+  Jednorazove: server srovna s GitHub (kdyz deploy hlasi konflikt)
+
+_remote-sync-staging.bat
+  Interni prikaz pro sync serveru
+
 _push-staging-only.bat
   Interni - nepouzivat primo
 

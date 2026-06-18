@@ -20,8 +20,7 @@ echo.
 echo Push OK. Stahuji na server new.svuom.cz ...
 echo.
 
-ssh -i ".deploy\svuom_staging" -o BatchMode=yes -o ConnectTimeout=20 root@glpi.svuom.cz "cd /var/www/html/new.www && git pull --ff-only origin main && echo. && echo Deploy hotov: && git rev-parse --short HEAD"
-
+call "%~dp0_remote-sync-staging.bat"
 if errorlevel 1 (
     echo.
     echo DEPLOY SELHAL - SSH nebo git pull na serveru.

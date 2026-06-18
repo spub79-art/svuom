@@ -12,6 +12,7 @@ if [[ ! -f config/secrets.php ]]; then
   exit 1
 fi
 
-git pull --ff-only origin main
+git fetch origin main
+git reset --hard origin/main
 
 echo "Deploy hotov: $(git rev-parse --short HEAD)"
