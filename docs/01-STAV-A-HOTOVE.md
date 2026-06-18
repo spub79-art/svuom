@@ -88,15 +88,25 @@ Varování `$'\r': command not found` na konci je neškodné (Windows CRLF); po 
 
 ## Běžný workflow po git init
 
+**Nejjednodušeji — dvojklik ve složce `deploy\`:**
+
+| Soubor | Co dělá |
+|--------|---------|
+| `deploy\1-commit-push-staging.bat` | commit + push + deploy na staging |
+| `deploy\2-push-staging.bat` | push + deploy (už máš commit) |
+| `deploy\3-staging-pull-only.bat` | jen pull na serveru |
+| `deploy\4-ssh-staging.bat` | SSH na server |
+| `deploy\5-kontrola-staging.bat` | robots.txt, hlavičky, git stav |
+
+Nápověda: `deploy\README.txt`
+
+Ručně (PowerShell):
+
 ```powershell
 cd c:\www\svuom
-git add -A
-git commit -m "popis zmeny"
 git push
-ssh -i ".deploy\svuom_staging" -o BatchMode=yes root@glpi.svuom.cz "cd /var/www/html/new.www && git pull --ff-only origin main"
+ssh -i ".deploy\svuom_staging" root@glpi.svuom.cz "cd /var/www/html/new.www && git pull --ff-only origin main"
 ```
-
-Nebo: `powershell -ExecutionPolicy Bypass -File .\scripts\deploy.ps1 -Message "popis zmeny"`
 
 ---
 
