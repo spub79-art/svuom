@@ -97,6 +97,7 @@ Varování `$'\r': command not found` na konci je neškodné (Windows CRLF); po 
 | `deploy\3-staging-pull-only.bat` | jen pull na serveru |
 | `deploy\4-ssh-staging.bat` | SSH na server |
 | `deploy\5-kontrola-staging.bat` | robots.txt, hlavičky, git stav |
+| `deploy\7-prepnout-php81.bat` | deploy + test PDO + přepnutí stagingu na PHP 8.1 |
 
 Nápověda: `deploy\README.txt`
 
