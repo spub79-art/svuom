@@ -17,7 +17,7 @@ if (!class_exists('SvuomMysqlResult', false)) {
 
 $db = mysql_pconnect('x', 'x', 'x');
 if (!$db) {
-    echo "FAIL: mysql_pconnect\n";
+    echo "FAIL: mysql_pconnect (spustte scripts/test-db-pdo.php pro detail)\n";
     exit(1);
 }
 

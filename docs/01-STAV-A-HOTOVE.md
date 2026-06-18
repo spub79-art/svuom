@@ -6,14 +6,14 @@
 
 | Prostředí | URL | DocumentRoot | DB | PHP (web) |
 |-----------|-----|--------------|-----|-----------|
-| **Staging** | https://new.svuom.cz | `/var/www/html/new.www` | `svuom_staging` | **5.6-fpm** (Apache vhost) |
+| **Staging** | https://new.svuom.cz | `/var/www/html/new.www` | `svuom_staging` | **přepínáme na 8.1-fpm** (dosud 5.6-fpm) |
 | **Produkce** | https://www.svuom.cz | `/var/www/html/www` | `svuom` | pravděpodobně 5.6-fpm (neověřeno v této relaci) |
 
 **Server:** `glpi.svuom.cz` (SSH jako root, klíč v `.deploy/svuom_staging` — **mimo git**)
 
 **Nainstalované PHP na serveru:** 5.6, 7.3, 8.1 (CLI default), 8.4, 8.5 — aktivní php-fpm: 5.6, 7.3, 8.1
 
-Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` — proto starý kód s `mysql_*` funguje.
+Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` — **cíl: přepnout na `php8.1-fpm.sock`** po ověření PDO vrstvy (`scripts/switch-staging-php81.sh`).
 
 ---
 
@@ -64,8 +64,8 @@ Staging vhost (`001b-new.www.conf`) explicitně používá `php5.6-fpm.sock` —
 
 - [x] **Git deploy na staging serveru** — hotovo 2026-06-18 (clone + záloha `new.www.pre-git-bak`)
 - [x] **Deploy workflow end-to-end** — ověřeno 2026-06-18 (push z PC → `git fetch` + `reset --hard` na serveru; `deploy\` BAT skripty)
-- [ ] Migrace `mysql_*` → PDO (nutné pro PHP 8) — **rozpracováno:** `system/mysql_pdo.php` (polyfill pro PHP 8+, na 5.6 beze změny)
-- [ ] Přepnutí vhostu na php8.1-fpm
+- [ ] Migrace `mysql_*` → PDO — **rozpracováno:** `system/mysql_pdo.php` (polyfill pro PHP 8+)
+- [ ] Přepnutí staging vhostu na php8.1-fpm (`scripts/switch-staging-php81.sh`)
 - [ ] Nová architektura (šablony, admin, migrace obsahu)
 - [ ] Inventář URL + redirecty
 - [ ] Audit přístupnosti / legislativy

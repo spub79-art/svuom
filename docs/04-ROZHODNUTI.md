@@ -14,7 +14,7 @@
 | 2026-06 | **WYSIWYG** editor pro kolegu, ne Markdown | Stávající obsah je HTML, menší bariéra |
 | 2026-06 | Design **oddělit**, ale vizuálně neměnit radikálně | Současný vzhled vyhovuje |
 | 2026-06 | Data v DB, **soubory jako odkazy** | Správný model pro admin a zálohy |
-| 2026-06 | PHP **5.6 na stagingu dočasně** | Starý kód funguje; migrace na 8.1 až po PDO |
+| 2026-06 | PHP **8.1 na stagingu** — neudržovat dual stack s 5.6 | 5.6 brání aktualizaci serveru; PDO polyfill + přepnutí vhostu |
 | 2026-06 | `trubky/` nechat bokem | Malá samostatná app, nízká priorita |
 
 ---

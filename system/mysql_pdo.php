@@ -1,11 +1,11 @@
 <?php
 
 /**
- * PDO-backed mysql_* polyfill for PHP 8+ (ext/mysql removed).
- * On PHP 5.6 with ext/mysql loaded, this file is a no-op.
+ * PDO vrstva nahrazující odstraněné mysql_* v PHP 8+.
+ * Staging i produkce mají běžet pod PHP 8.1+ (php5.6 je zastaralé).
  */
 
-if (function_exists('mysql_pconnect') || defined('SVUOM_MYSQL_PDO_LOADED')) {
+if (defined('SVUOM_MYSQL_PDO_LOADED')) {
     return;
 }
 
@@ -85,7 +85,6 @@ function svuom_mysql_pdo()
         $pdo = new PDO($dsn, $cfg['db_user'], $cfg['db_pass'], array(
             PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_BOTH,
-            PDO::ATTR_PERSISTENT => true,
         ));
     } catch (PDOException $e) {
         $failed = true;
